@@ -1,0 +1,262 @@
+@import "syntax-variables";
+:host,
+atom-text-editor {
+    background-color: @syntax-background-color;
+    color: @syntax-text-color;
+    .wrap-guide {
+        background-color: @syntax-wrap-guide-color;
+    }
+    .indent-guide {
+        color: @syntax-indent-guide-color;
+    }
+    .invisible-character {
+        color: @syntax-invisible-character-color;
+    }
+    .gutter {
+        background-color: @syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+        .line-number {
+            &.cursor-line {
+                background-color: @syntax-gutter-background-color-selected;
+                color: @syntax-gutter-text-color-selected;
+            }
+            &.cursor-line-no-selection {
+                color: @syntax-gutter-text-color-selected;
+            }
+        }
+    }
+    .fold-marker:after,
+    .gutter .line-number.folded,
+    .gutter .line-number:after {
+        color: @syntax-comment-color;
+    }
+    .invisible {
+        color: @syntax-comment-color;
+    }
+    .cursor {
+        color: @syntax-cursor-color;
+    }
+    .selection .region {
+        background-color: @syntax-selection-color;
+    }
+}
+:host .search-results .marker .region,
+atom-text-editor .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+}
+:host .search-results .marker.current-result .region,
+atom-text-editor .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+}
+.comment {
+    color: @syntax-comment-color;
+}
+.keyword {
+    color: @syntax-keyword-color;
+    &.control {
+        color: @syntax-keyword-color;
+    }
+    &.operator {
+        color: @syntax-secondary-text-color;
+    }
+    &.other.special-method {
+        color: @syntax-purple-color;
+    }
+    &.other.unit {
+        color: @syntax-purple-color;
+    }
+}
+.storage {
+    color: @syntax-keyword-color;
+}
+.constant {
+    color: @syntax-purple-color;
+    &.character.escape {
+        color: @syntax-number-color;
+    }
+    &.numeric {
+        color: @syntax-number-color;
+    }
+    &.other.color {
+        color: @syntax-purple-color;
+    }
+    &.other.symbol {
+        color: @syntax-number-color;
+    }
+}
+.variable {
+    color: @syntax-blue-color;
+    &.interpolation {
+        color: @syntax-blue-color;
+    }
+    &.parameter.function {
+        color: @syntax-purple-color;
+    }
+}
+.invalid.illegal {
+    background-color: @syntax-attention-color;
+    color: @syntax-background-color;
+}
+.string {
+    color: @syntax-string-color;
+    &.regexp {
+        color: @syntax-string-color;
+        .source.ruby.embedded {
+            color: @syntax-string-color;
+        }
+    }
+    &.other.link {
+        color: @syntax-light-blue-color;
+    }
+}
+.punctuation {
+    &.definition {
+        &.comment {
+            color: @syntax-comment-color;
+        }
+        &.array,
+        &.parameters,
+        &.string,
+        &.variable {
+            color: @syntax-blue-color;
+        }
+        &.heading,
+        &.identity {
+            color: @syntax-light-blue-color;
+        }
+        &.bold {
+            color: @syntax-macro-color;
+            font-weight: bold;
+        }
+        &.italic {
+            color: @syntax-light-blue-color;
+            font-style: italic;
+        }
+    }
+    &.section.embedded {
+        color: @syntax-light-blue-color;
+    }
+}
+.support {
+    &.class {
+        color: @syntax-purple-color;
+    }
+    &.function {
+        color: @syntax-purple-color;
+        &.any-method {
+            color: @syntax-purple-color;
+        }
+    }
+}
+.entity {
+    &.name.function {
+        color: @syntax-purple-color;
+    }
+    &.name.type {
+        color: @syntax-secondary-text-color;
+        text-decoration: underline;
+    }
+    &.other.inherited-class {
+        color: @syntax-purple-color;
+    }
+    &.name.class,
+    &.name.type.class {
+        color: @syntax-secondary-text-color;
+    }
+    &.name.section {
+        color: @syntax-purple-color;
+    }
+    &.name.tag {
+        color: @syntax-purple-color;
+        text-decoration: underline;
+    }
+    &.other.attribute-name {
+        color: @syntax-purple-color;
+        &.id {
+            color: @syntax-secondary-text-color;
+        }
+    }
+}
+.meta {
+    &.class {
+        color: @syntax-macro-color;
+    }
+    &.link {
+        color: @syntax-light-blue-color;
+    }
+    &.require {
+        color: @syntax-blue-color;
+    }
+    &.selector {
+        color: @syntax-purple-color;
+    }
+    &.separator {
+        background-color: @syntax-selection-color;
+        color: @syntax-text-color;
+    }
+}
+.none {
+    color: @syntax-text-color;
+}
+.markup {
+    &.bold {
+        color: @syntax-text-color;
+        font-weight: bold;
+    }
+    &.changed {
+        color: @syntax-text-color;
+    }
+    &.deleted {
+        color: @syntax-text-color;
+    }
+    &.italic {
+        color: @syntax-text-color;
+        font-style: italic;
+    }
+    &.heading .punctuation.definition.heading {
+        color: @syntax-text-color;
+    }
+    &.inserted {
+        color: @syntax-text-color;
+    }
+    &.list {
+        color: @syntax-text-color;
+    }
+    &.quote {
+        color: @syntax-text-color;
+    }
+    &.raw.inline {
+        color: @syntax-text-color;
+    }
+}
+.source.gfm .markup {
+    -webkit-font-smoothing: auto;
+    &.heading {
+        color: @syntax-text-color;
+    }
+}
+:host([mini]) .scroll-view,
+atom-text-editor[mini] .scroll-view {
+    padding-left: 1px;
+}
+atom-text-editor::shadow .bracket-matcher .region {
+    border: 1px solid rgba(220, 140, 55, 0.6);
+    background-color: rgba(255, 215, 0, 0.3);
+    border-radius: 3px;
+    z-index: 10;
+}
+// .tree-view {
+//     .status-modified {
+//         color: @syntax-color-modified !important;
+//     }
+//     .status-added {
+//         color: @syntax-color-added !important;
+//     }
+//     .status-renamed {
+//         color: @syntax-color-renamed !important;
+//     }
+//     .status-removed {
+//         color: @syntax-color-removed !important;
+//     }
+// }

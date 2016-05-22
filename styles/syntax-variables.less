@@ -1,0 +1,43 @@
+@import "colors";
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+@syntax-text-color: #004260;
+@syntax-secondary-text-color: #006592;
+@syntax-cursor-color: #10100F;
+@syntax-selection-color: #F6F9FC;
+@syntax-background-color: #FFFFFF;
+
+// Code colors
+@syntax-comment-color: #BFBFBF;
+@syntax-string-color: #00B664;
+@syntax-number-color: #F650DC;
+@syntax-keyword-color: #F73D8A;
+@syntax-blue-color: #008ED4;
+@syntax-light-blue-color: #80A5E9;
+@syntax-purple-color: #7540CA;
+@syntax-macro-color: #FF9834;
+@syntax-attention-color: #FF3431;
+
+// Guide colors
+@syntax-invisible-character-color: #DBDBDB;
+@syntax-wrap-guide-color: @syntax-invisible-character-color;
+@syntax-indent-guide-color: @syntax-invisible-character-color;
+
+// Find and replace markers
+@syntax-result-marker-color: @syntax-comment-color;
+@syntax-result-marker-color-selected: @syntax-comment-color;
+
+// Gutter colors
+@syntax-gutter-text-color: @syntax-comment-color;
+@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+@syntax-gutter-background-color: #FFFFFF;
+@syntax-gutter-background-color-selected: #FFFFFF;
+
+// Git colors
+@syntax-color-renamed: @syntax-blue-color;
+@syntax-color-added: @syntax-string-color;
+@syntax-color-modified: @syntax-macro-color;
+@syntax-color-removed: @syntax-attention-color;
