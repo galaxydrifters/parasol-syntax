@@ -72,6 +72,9 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 .constant {
     color: @syntax-purple-color;
+    &.boolean {
+        color: @syntax-number-color;
+    }
     &.character.escape {
         color: @syntax-number-color;
     }
@@ -148,6 +151,9 @@ atom-text-editor .search-results .marker.current-result .region {
             color: @syntax-purple-color;
         }
     }
+    &.type {
+        color: @syntax-purple-color;
+    }
 }
 .entity {
     &.name.function {
@@ -168,8 +174,7 @@ atom-text-editor .search-results .marker.current-result .region {
         color: @syntax-purple-color;
     }
     &.name.tag {
-        color: @syntax-purple-color;
-        text-decoration: underline;
+        color: @syntax-keyword-color;
     }
     &.other.attribute-name {
         color: @syntax-purple-color;
@@ -177,6 +182,9 @@ atom-text-editor .search-results .marker.current-result .region {
             color: @syntax-secondary-text-color;
         }
     }
+}
+.meta.structure.dictionary.json:not(.value) > .string.quoted.double.json, .meta.structure.dictionary.json:not(.value) > .string.quoted.double.json > .punctuation.definition.string.json {
+    color: @syntax-blue-color;
 }
 .meta {
     &.class {
@@ -194,6 +202,9 @@ atom-text-editor .search-results .marker.current-result .region {
     &.separator {
         background-color: @syntax-selection-color;
         color: @syntax-text-color;
+    }
+    &.type {
+        color: @syntax-purple-color;
     }
 }
 .none {

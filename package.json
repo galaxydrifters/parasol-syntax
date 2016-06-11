@@ -1,7 +1,7 @@
 {
   "name": "parasol-syntax",
   "theme": "syntax",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Light and happy theme.",
   "keywords": [
     "syntax",
@@ -10,9 +10,18 @@
     "parasol",
     "day"
   ],
-  "repository": "https://github.com/galaxydrifters/parasol-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galaxydrifters/parasol-syntax.git"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
-  }
+  },
+  "readme": "# Parasol Syntax\n\nLight and happy theme.\n\n\n![Typescript](https://raw.githubusercontent.com/galaxydrifters/parasol-syntax/master/parasol-syntax.jpg)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/galaxydrifters/parasol-syntax/issues"
+  },
+  "homepage": "https://github.com/galaxydrifters/parasol-syntax#readme"
 }
